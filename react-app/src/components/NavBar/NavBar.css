@@ -1,0 +1,62 @@
+.nav-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-contact-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    gap: 15px;
+    margin-top: 15px;
+    margin-right: 20px;
+    font-size: 15px;
+}
+
+.nav-wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 12rem;
+    margin-right: 12rem;
+}
+
+.logo-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+}
+
+.nav-logo {
+    width: 150px;
+    height: 150px;
+}
+
+.logo-text-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+    color: rgb(197, 150, 33);
+}
+
+.nav-pages-bttn-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 25px;
+
+}
+
+.nav-attorney-link{
+    text-decoration: none;
+    color: rgb(197, 150, 33);
+}
+
+.chinese-trans-bttn{
+    padding: 3px;
+    border: 1px solid green;
+    border-radius: 5px;
+}
