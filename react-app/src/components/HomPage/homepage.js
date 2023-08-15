@@ -7,6 +7,7 @@ import phoneIcon from "../../images/phone-icon.avif";
 import mapPic from "../../images/location-map-pic.png";
 import atlPic from "../../images/atlanta-capital.jpeg"
 import welcomePic from "../../images/homepage-pic.png"
+import amerFlag from "../../images/amer-flag.jpeg"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
@@ -139,92 +140,101 @@ const Homepage = () => {
             To learn more about your potential legal options, have questions or to schedule a consultations contact us
             today – it’s free and strictly confidential.
           </div>
-          <img className="hompage-phone-icon" src={phoneIcon} />
           <div className="homepage-call-us-num">(770) 936-3991</div>
+          <div className="phone-icon-dec-container">
+            <div className="phone-border-dec">__________________________________________________</div>
+            <FontAwesomeIcon className='hompage-phone-icon' icon={faPhone} style={{ color: "#c59621" }} />
+            <div className="phone-border-dec">__________________________________________________</div>
+          </div>
+          <Link to="/contact" onClick={scrollToTop} style={{ textDecoration: 'none', }}>
+            <div className="contact-bttn">Contact Us</div>
+          </Link>
         </div>
         <div className="hompage-contact-email-container">
-          <div className="hompage-contact-email-message-container">
-            <div className="hompage-contact-email-message-title">Don't hesitate to ask</div>
-            <div className="hompage-contact-email-message-p1">
-              Feel free to ask us anything about you legal situation, send us your questions or comments below.
+          <div className="contact-email-container-right">
+            <div className="hompage-contact-email-message-container">
+              <div className="hompage-contact-email-message-title">Don't hesitate to ask</div>
+              <div className="hompage-contact-email-message">
+                Feel free to ask us anything about you legal situation, send us your questions or comments below.
+              </div>
+              <div className="hompage-contact-email-message" style={{ color: "white" }}>Let us help you!</div>
             </div>
-            <div className="hompage-contact-email-message-p2">Let us help you!</div>
-          </div>
-          <div className="hompage-contact-email-error-container"></div>
+            <div className="hompage-contact-email-error-container"></div>
+            <form ref={form} onSubmit={sendEmail}>
+              <div className="contact-email-form-wrapper">
+                <div className="contact-email-input-container">
+                  <label className="contact-email-input-title">Client Name:</label>
+                  <input className="contact-email-input-field" type="text" name="client_name" placeholder="Full Name" />
+                </div>
 
-          <form ref={form} onSubmit={sendEmail}>
-            <div className="contact-email-form-wrapper">
-              <div className="contact-email-input-container">
-                <label className="contact-email-input-title">Client Name:</label>
-                <input className="contact-email-input-field" type="text" name="client_name" placeholder="Full Name" />
-              </div>
+                <div className="contact-email-input-container">
+                  <label className="contact-email-input-title">Company Name:</label>
+                  <input
+                    className="contact-email-input-field"
+                    type="text"
+                    name="company_name"
+                    placeholder="Company Name"
+                  />
+                </div>
 
-              <div className="contact-email-input-container">
-                <label className="contact-email-input-title">Company Name:</label>
-                <input
-                  className="contact-email-input-field"
-                  type="text"
-                  name="company_name"
-                  placeholder="Company Name"
-                />
-              </div>
+                <div className="contact-email-input-container">
+                  <label className="contact-email-input-title">Email:</label>
+                  <input
+                    className="contact-email-input-field"
+                    type="email"
+                    name="client_email"
+                    placeholder="Client Email"
+                  />
+                </div>
 
-              <div className="contact-email-input-container">
-                <label className="contact-email-input-title">Email:</label>
-                <input
-                  className="contact-email-input-field"
-                  type="email"
-                  name="client_email"
-                  placeholder="Client Email"
-                />
-              </div>
+                <div className="contact-email-input-container">
+                  <label className="contact-email-input-title">Phone:</label>
+                  <input
+                    className="contact-email-input-field"
+                    type="number"
+                    name="client_phone"
+                    placeholder="Phone Number"
+                  />
+                </div>
 
-              <div className="contact-email-input-container">
-                <label className="contact-email-input-title">Phone:</label>
-                <input
-                  className="contact-email-input-field"
-                  type="number"
-                  name="client_phone"
-                  placeholder="Phone Number"
-                />
-              </div>
+                <div className="contact-email-input-container">
+                  <label className="contact-email-input-title">Fax:</label>
+                  <input className="contact-email-input-field" type="number" name="client_fax" placeholder="Fax Number" />
+                </div>
 
-              <div className="contact-email-input-container">
-                <label className="contact-email-input-title">Fax:</label>
-                <input className="contact-email-input-field" type="number" name="client_fax" placeholder="Fax Number" />
-              </div>
+                <div className="contact-email-input-container">
+                  <label className="contact-email-input-title">URL:</label>
+                  <input className="contact-email-input-field" type="text" name="client_url" placeholder="URL" />
+                </div>
 
-              <div className="contact-email-input-container">
-                <label className="contact-email-input-title">URL:</label>
-                <input className="contact-email-input-field" type="text" name="client_url" placeholder="URL" />
-              </div>
-
-              <div className="contact-email-input-container">
-                <label className="contact-email-input-title">Question:</label>
-                <select className="contact-email-input-field-select" name="question_type">
-                  <option selected disabled value="">
-                    What do you have a question about?
-                  </option>
-                  {TYPEQUESTIONS.map((questionType) => (
-                    <option key={questionType} value={questionType}>
-                      {questionType}
+                <div className="contact-email-input-container">
+                  <label className="contact-email-input-title">Question:</label>
+                  <select className="contact-email-input-field-select" name="question_type">
+                    <option selected disabled value="">
+                      What do you have a question about?
                     </option>
-                  ))}
-                </select>
+                    {TYPEQUESTIONS.map((questionType) => (
+                      <option key={questionType} value={questionType}>
+                        {questionType}
+                      </option>
+                    ))}
+                  </select>
 
-                <textarea
-                  className="contact-email-input-field-question"
-                  type="text"
-                  name="message"
-                  placeholder="Write your question here."
-                />
+                  <textarea
+                    className="contact-email-input-field-question"
+                    type="text"
+                    name="message"
+                    placeholder="Write your question here."
+                  />
+                </div>
+
+                <button className="contact-email-submit-bttn" type="submit" value="Send">
+                  Submit
+                </button>
               </div>
-
-              <button className="contact-email-submit-bttn" type="submit" value="Send">
-                Submit
-              </button>
-            </div>
-          </form>
+            </form>
+          </div>
+          <img className="amer-flag-pic" src={amerFlag}/>
         </div>
       </div>
 
