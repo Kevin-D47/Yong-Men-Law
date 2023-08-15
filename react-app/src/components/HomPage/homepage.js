@@ -59,11 +59,12 @@ const Homepage = () => {
 
   return (
     <div className="homepage-container">
-      <div className="homepage-title-container">
+      {/* <div className="homepage-title-container">
         <div className="hompage-title">Welcome To Law Office of Yong Men, P.C</div>
-        <img className="welcome-img" src={welcomePic}/>
-      </div>
+      </div> */}
+      <img className="welcome-img" src={welcomePic} />
       <div className="hompage-wrapper">
+
         <div className="homepage-welcome-container">
           <div className="welcome-message-container">
             <div className="welcome-message-p1">
@@ -117,7 +118,7 @@ const Homepage = () => {
                 </div>
               </div>
               <div className="service-info-section">
-                <FontAwesomeIcon icon={faPeopleRoof} style={{ color: "#ffffff", fontSize: "26px"}} />
+                <FontAwesomeIcon icon={faPeopleRoof} style={{ color: "#ffffff", fontSize: "26px" }} />
                 <div className="services-info-title">Family Law</div>
                 <div className="services-info-inner">
                   <li>Divorce</li>
