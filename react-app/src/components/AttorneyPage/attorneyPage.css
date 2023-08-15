@@ -104,6 +104,7 @@
     width: 280px;
     height: 400px;
     border-radius: 10px;
+    object-fit: cover;
 }
 
 .attorney-profile-wrapper-right{

@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom/cjs/react-router-dom.min";
 
-import profilePic from "../../images/yong-men-profile-pic.jpeg";
+import profilePic from "../../images/yong-men-profile-pic.png";
 import amerBarPic from "../../images/american-bar-assoc.png";
 import gaBarPic from "../../images/georgia-bar-assoc.png";
 import amerImmgLawPic from "../../images/american-immigration-lawyers-assoc.png";
