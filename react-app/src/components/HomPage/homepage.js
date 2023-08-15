@@ -6,6 +6,7 @@ import emailjs from "@emailjs/browser";
 import phoneIcon from "../../images/phone-icon.avif";
 import mapPic from "../../images/location-map-pic.png";
 import atlPic from "../../images/atlanta-capital.jpeg"
+import welcomePic from "../../images/homepage-pic.png"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
@@ -60,6 +61,7 @@ const Homepage = () => {
     <div className="homepage-container">
       <div className="homepage-title-container">
         <div className="hompage-title">Welcome To Law Office of Yong Men, P.C</div>
+        <img className="welcome-img" src={welcomePic}/>
       </div>
       <div className="hompage-wrapper">
         <div className="homepage-welcome-container">
