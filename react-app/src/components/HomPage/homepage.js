@@ -63,9 +63,10 @@ const Homepage = () => {
       {/* <div className="homepage-title-container">
         <div className="hompage-title">Welcome To Law Office of Yong Men, P.C</div>
       </div> */}
-      <img className="welcome-img" src={welcomePic} />
+      <div className="hompage-img-wrapper">
+        <img className="welcome-img" src={welcomePic} />
+      </div>
       <div className="hompage-wrapper">
-
         <div className="homepage-welcome-container">
           <div className="welcome-message-container">
             <div className="welcome-message-p1">
