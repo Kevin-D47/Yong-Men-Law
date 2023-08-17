@@ -8,6 +8,9 @@ import mapPic from "../../images/location-map-pic.png";
 import atlPic from "../../images/atlanta-capital.jpeg"
 import welcomePic from "../../images/homepage-pic.png"
 import amerFlag from "../../images/amer-flag.jpeg"
+import amerBarPic from "../../images/american-bar-assoc.png";
+import gaBarPic from "../../images/georgia-bar-assoc.png";
+import amerImmgLawPic from "../../images/american-immigration-lawyers-assoc.png";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
@@ -128,7 +131,7 @@ const Homepage = () => {
                 </div>
               </div>
               <div className="service-button-section">
-                <Link to="/practice" onClick={scrollToTop} style={{ textDecoration: 'none', }}>
+                <Link to="/practice" onClick={scrollToTop} style={{ textDecoration: 'none' }}>
                   <div className="view-services-bttn">View All Services</div>
                 </Link>
               </div>
@@ -235,7 +238,12 @@ const Homepage = () => {
               </div>
             </form>
           </div>
-          <img className="amer-flag-pic" src={amerFlag}/>
+          <img className="amer-flag-pic" src={amerFlag} />
+        </div>
+        <div className="homepage-membership-pics-container">
+          <img src={gaBarPic} className="ga-bar-pic" />
+          <img src={amerBarPic} className="amer-bar-pic" />
+          <img src={amerImmgLawPic} className="amer-imm-law-pic" />
         </div>
       </div>
 
@@ -250,10 +258,10 @@ const Homepage = () => {
         </div>
         <div className="footer-business-overview-container">
           <div className="footer-business-overview-title">Business Overview</div>
-          <NavLink to="/attorney">Attorney</NavLink>
-          <NavLink to="/practice">Practice</NavLink>
-          <NavLink to="/resources">Resources</NavLink>
-          <NavLink to="/contact">Contact Us</NavLink>
+          <NavLink to="/attorney" style={{ textDecoration: "none", color: "grey" }}>Attorney</NavLink>
+          <NavLink to="/practice" style={{ textDecoration: "none", color: "grey" }}>Practice</NavLink>
+          <NavLink to="/resources" style={{ textDecoration: "none", color: "grey" }}>Resources</NavLink>
+          <NavLink to="/contact" style={{ textDecoration: "none", color: "grey" }}>Contact Us</NavLink>
         </div>
         <div className="footer-contact-info-container">
           <div className="footer-contact-us-title">Contact Info</div>
