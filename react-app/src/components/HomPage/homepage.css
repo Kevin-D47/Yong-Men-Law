@@ -15,7 +15,7 @@
   justify-content: center;
   padding-left: 6rem;
   padding-right: 6rem;
-  background-color: rgb(48, 48, 48);
+  background-color: rgb(120, 95, 20);
 }
 
 .welcome-img {
@@ -239,7 +239,7 @@
   gap: 30px;
   margin-bottom: 4rem;
 
-  background-color: rgb(197, 150, 33);;
+  background-color: rgb(197, 150, 33);
   padding: 40px;
   border-radius: 5px;
 }
@@ -264,6 +264,15 @@
   font-size: 18px;
 }
 
+.form-req-mes{
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
 .contact-email-form-wrapper {
   display: flex;
   flex-direction: column;
@@ -278,14 +287,19 @@
 }
 
 .contact-email-input-title {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
   margin-left: 6px;
+  color: white;
+  font-weight: bold;
 }
 
 .contact-email-input-field {
   width: 30rem;
   height: 2rem;
   border-radius: 3px;
-  border: solid .1rem black;
+  border: solid .1rem grey;
   margin-top: 3px;
   padding-left: 15px;
 }
@@ -294,7 +308,7 @@
   width: 31.2rem;
   height: 2.5rem;
   border-radius: 3px;
-  border: solid .1rem black;
+  border: solid .1rem grey;
   margin-top: 3px;
   padding-left: 15px;
 }
@@ -306,23 +320,37 @@
   min-height: 4rem;
   max-height: 15rem;
   border-radius: 3px;
-  border: solid .1rem black;
+  border: solid .1rem grey;
   margin-top: 10px;
   padding-left: 15px;
 }
 
 
-.contact-email-submit-bttn {
+.email-submit-bttn {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100px;
-  height: 35px;
-  font-size: 14px;
+  margin-top: 12px;
+
+  width: 8rem;
+  height: 3rem;
+  background-color: whitesmoke;
+  border: 2px solid grey;
   border-radius: 5px;
+  padding: 14px;
+
+  font-size: 18px;
+  color: black;
 
   margin-top: 10px;
+}
+
+.email-submit-bttn:hover {
+  cursor: pointer;
+  border: 2px solid gray;
+  background-color: grey;
+  color: white;
 }
 
 .amer-flag-pic{
@@ -372,6 +400,15 @@
 
 .footer-business-overview-title {
   color: rgb(225, 225, 225)
+}
+
+.footer-nav-link{
+  text-decoration: none;
+  color: gray;
+}
+
+.footer-nav-link:hover{
+  color: rgb(197, 150, 33);
 }
 
 .footer-contact-info-container {

@@ -162,13 +162,20 @@ const Homepage = () => {
                 Feel free to ask us anything about you legal situation, send us your questions or comments below.
               </div>
               <div className="hompage-contact-email-message" style={{ color: "white" }}>Let us help you!</div>
+
             </div>
-            <div className="hompage-contact-email-error-container"></div>
             <form ref={form} onSubmit={sendEmail}>
+              <div className="form-req-mes"> <div style={{ color: "red" }}> * </div> - Required field</div>
               <div className="contact-email-form-wrapper">
                 <div className="contact-email-input-container">
-                  <label className="contact-email-input-title">Client Name:</label>
-                  <input className="contact-email-input-field" type="text" name="client_name" placeholder="Full Name" />
+                  <label className="contact-email-input-title">Client Name:<div style={{ color: "red" }}>*</div></label>
+                  <input
+                    className="contact-email-input-field"
+                    type="text"
+                    name="client_name"
+                    placeholder="Full Name"
+                    required
+                  />
                 </div>
 
                 <div className="contact-email-input-container">
@@ -182,22 +189,24 @@ const Homepage = () => {
                 </div>
 
                 <div className="contact-email-input-container">
-                  <label className="contact-email-input-title">Email:</label>
+                  <label className="contact-email-input-title">Email:<div style={{ color: "red" }}>*</div></label>
                   <input
                     className="contact-email-input-field"
                     type="email"
                     name="client_email"
                     placeholder="Client Email"
+                    required
                   />
                 </div>
 
                 <div className="contact-email-input-container">
-                  <label className="contact-email-input-title">Phone:</label>
+                  <label className="contact-email-input-title">Phone:<div style={{ color: "red" }}>*</div></label>
                   <input
                     className="contact-email-input-field"
                     type="number"
                     name="client_phone"
                     placeholder="Phone Number"
+                    required
                   />
                 </div>
 
@@ -212,8 +221,8 @@ const Homepage = () => {
                 </div>
 
                 <div className="contact-email-input-container">
-                  <label className="contact-email-input-title">Question:</label>
-                  <select className="contact-email-input-field-select" name="question_type">
+                  <label className="contact-email-input-title">Question:<div style={{ color: "red" }}>*</div></label>
+                  <select className="contact-email-input-field-select" name="question_type" required>
                     <option selected disabled value="">
                       What do you have a question about?
                     </option>
@@ -229,10 +238,11 @@ const Homepage = () => {
                     type="text"
                     name="message"
                     placeholder="Write your question here."
+                    required
                   />
                 </div>
 
-                <button className="contact-email-submit-bttn" type="submit" value="Send">
+                <button className="email-submit-bttn" type="submit" value="Send">
                   Submit
                 </button>
               </div>
@@ -258,10 +268,10 @@ const Homepage = () => {
         </div>
         <div className="footer-business-overview-container">
           <div className="footer-business-overview-title">Business Overview</div>
-          <NavLink to="/attorney" style={{ textDecoration: "none", color: "grey" }}>Attorney</NavLink>
-          <NavLink to="/practice" style={{ textDecoration: "none", color: "grey" }}>Practice</NavLink>
-          <NavLink to="/resources" style={{ textDecoration: "none", color: "grey" }}>Resources</NavLink>
-          <NavLink to="/contact" style={{ textDecoration: "none", color: "grey" }}>Contact Us</NavLink>
+          <NavLink className='footer-nav-link' to="/attorney">Attorney</NavLink>
+          <NavLink className='footer-nav-link' to="/practice">Practice</NavLink>
+          <NavLink className='footer-nav-link' to="/resources">Resources</NavLink>
+          <NavLink className='footer-nav-link' to="/contact">Contact Us</NavLink>
         </div>
         <div className="footer-contact-info-container">
           <div className="footer-contact-us-title">Contact Info</div>
