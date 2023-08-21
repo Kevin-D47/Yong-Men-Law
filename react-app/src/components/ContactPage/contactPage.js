@@ -1,12 +1,20 @@
 import React from "react";
 import { NavLink } from "react-router-dom/cjs/react-router-dom.min";
 import { useRef } from "react";
+
 import emailjs from "@emailjs/browser";
+
 import contactBG from "../../images/contact-bg.png";
 import mapPic from "../../images/location-map-pic.png";
-import phoneIcon from "../../images/phone-icon.avif";
-import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
+import contactMapPic from "../../images/contact-map-pic.png";
+import officePic from "../../images/office-pic.png";
+import amerBarPic from "../../images/american-bar-assoc.png";
+import gaBarPic from "../../images/georgia-bar-assoc.png";
+import amerImmgLawPic from "../../images/american-immigration-lawyers-assoc.png";
+
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { faFax } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
@@ -58,10 +66,16 @@ const ContactPage = () => {
                 You can contact us via phone call, fax, email, walk-in (appointment preferred) or send us your questions
                 or comments in the form below.
               </div>
+              <div className="contact-form-req-mes"> <div style={{ color: "red" }}> * </div> - Required field</div>
               <div className="contact-page-form-wrapper">
                 <div className="contact-form-input-container">
-                  <label className="contact-form-input-title">Client Name:</label>
-                  <input className="contact-form-input-field" type="text" name="client_name" placeholder="Full Name" />
+                  <label className="contact-form-input-title">Client Name:<div style={{ color: "red" }}>*</div></label>
+                  <input className="contact-form-input-field"
+                    type="text"
+                    name="client_name"
+                    placeholder="Full Name"
+                    required
+                  />
                 </div>
 
                 <div className="contact-form-input-container">
@@ -75,24 +89,24 @@ const ContactPage = () => {
                 </div>
 
                 <div className="contact-form-input-container">
-                  <label className="contact-form-input-title">Email:</label>
+                  <label className="contact-form-input-title">Email:<div style={{ color: "red" }}>*</div></label>
                   <input
                     className="contact-form-input-field"
                     type="email"
                     name="client_email"
                     placeholder="Client Email"
+                    required
                   />
                 </div>
 
                 <div className="contact-form-input-container">
-                  <label className="contact-form-input-title">
-                    <></>
-                  </label>
+                  <label className="contact-form-input-title">Phone:<div style={{ color: "red" }}>*</div></label>
                   <input
                     className="contact-form-input-field"
                     type="number"
                     name="client_phone"
                     placeholder="Phone Number"
+                    required
                   />
                 </div>
 
@@ -112,8 +126,8 @@ const ContactPage = () => {
                 </div>
 
                 <div className="contact-form-input-container">
-                  <label className="contact-form-input-title">Question:</label>
-                  <select className="contact-form-input-field-select" name="question_type">
+                  <label className="contact-form-input-title">Question:<div style={{ color: "red" }}>*</div></label>
+                  <select className="contact-form-input-field-select" name="question_type" required>
                     <option selected disabled value="">
                       What do you have a question about?
                     </option>
@@ -129,35 +143,39 @@ const ContactPage = () => {
                     type="text"
                     name="message"
                     placeholder="Write your question here."
+                    required
                   />
                 </div>
+                <div className="contact-form-button-container">
+                  <button className="contact-email-submit-bttn" type="submit" value="Send">
+                    Submit
+                  </button>
+                </div>
 
-                <button className="contact-email-submit-bttn" type="submit" value="Send">
-                  Submit
-                </button>
+
               </div>
             </form>
           </div>
           <div className="contact-info-container-right">
-            <img className="contact-map-pic" src={mapPic} />
+            <img className="office-pic" src={officePic} />
             <div>
               {" "}
               <span className="location-icon">
                 <FontAwesomeIcon icon={faLocationDot} style={{ color: "#c59621" }} />
               </span>
-               3331 Chamblee Dunwoody Road, Atlanta, GA, 30341
+              3331 Chamblee Dunwoody Road, Atlanta, GA, 30341
             </div>
             <div className="contact-us-item">
-              <span className="phone-number"> <FontAwesomeIcon icon={faPhone} style={{color: "#c59621",}} /></span>(770) 936-3991
+              <span className="phone-number"> <FontAwesomeIcon icon={faPhone} style={{ color: "#c59621", }} /></span>(770) 936-3991
             </div>
             <div className="contact-us-fax">
-                <span className="contact-fax"><FontAwesomeIcon icon={faFax} style={{color: "#c59621",}} /></span> (770) 936-3994</div>
+              <span className="contact-fax"><FontAwesomeIcon icon={faFax} style={{ color: "#c59621", }} /></span> (770) 936-3994</div>
 
             <div className="contact-us-email">
-                <span className="contact-email"><FontAwesomeIcon icon={faEnvelope} style={{color: "#c59621",}} /></span> yongmen@yongmenlaw.com</div>
+              <span className="contact-email"><FontAwesomeIcon icon={faEnvelope} style={{ color: "#c59621", }} /></span> yongmen@yongmenlaw.com</div>
             <div className="business-hours-container">
-                <span className="contact-time"><FontAwesomeIcon icon={faClock} style={{color: "#c59621",}} />  Business Hours: </span>
-          
+              <span className="contact-time"><FontAwesomeIcon icon={faClock} style={{ color: "#c59621", }} />  Business Hours: </span>
+
               <div className="business-hours-weekdays">
                 <div>Monday - Friday</div>
                 <div>9:00 am - 6:00pm</div>
@@ -171,6 +189,24 @@ const ContactPage = () => {
         </div>
       </div>
 
+      <div className="contact-map-container">
+        <a
+          className="google-maps-links"
+          href="https://www.google.com/maps/place/Yong+Men+Law+Office/@33.892122,-84.2987488,17z/data=!3m1!4b1!4m6!3m5!1s0x88f509b40b02743b:0x9a04e4cf0d29dd79!8m2!3d33.892122!4d-84.2961739!16s%2Fg%2F1tfstqkh?entry=ttu"
+          target="_blank"
+        >
+          Click here for direction on Google Maps
+        </a>
+
+        <img className="contact-map-pic" src={contactMapPic} />
+      </div>
+
+      <div className="contact-membership-pics-container">
+        <img src={gaBarPic} className="ga-bar-pic" />
+        <img src={amerBarPic} className="amer-bar-pic" />
+        <img src={amerImmgLawPic} className="amer-imm-law-pic" />
+      </div>
+
       <div className="footer-container">
         <div className="footer-about-us-container">
           <div className="footer-about-us-title">About Us</div>
@@ -182,10 +218,10 @@ const ContactPage = () => {
         </div>
         <div className="footer-business-overview-container">
           <div className="footer-business-overview-title">Business Overview</div>
-          <NavLink to="/attorney">Attorney</NavLink>
-          <NavLink to="/practice">Practice</NavLink>
-          <NavLink to="/resources">Resources</NavLink>
-          <NavLink to="/contact">Contact Us</NavLink>
+          <NavLink className='footer-nav-link' to="/attorney">Attorney</NavLink>
+          <NavLink className='footer-nav-link' to="/practice">Practice</NavLink>
+          <NavLink className='footer-nav-link' to="/resources">Resources</NavLink>
+          <NavLink className='footer-nav-link' to="/contact">Contact Us</NavLink>
         </div>
         <div className="footer-contact-info-container">
           <div className="footer-contact-us-title">Contact Info</div>
@@ -193,9 +229,9 @@ const ContactPage = () => {
             <div>Address:</div>
             <div> 3331 Chamblee Dunwoody Road, Atlanta, GA, 30341</div>
           </div>
-          <div className="footer-phone-num" ><span className="phone-number"> <FontAwesomeIcon icon={faPhone} style={{color: "#c59621",}} /></span> (770) 936-3991</div>
-          <div className="footer-fax-num"><span className="contact-fax"><FontAwesomeIcon icon={faFax} style={{color: "#c59621",}} /></span>(770) 936-3994</div>
-          <div className="footer-email"> <span className="contact-footer-email"><FontAwesomeIcon icon={faEnvelope} style={{color: "#c59621",}} /></span> yongmen@yongmenlaw.com</div>
+          <div className="footer-phone-num" ><span className="phone-number"> <FontAwesomeIcon icon={faPhone} style={{ color: "#c59621", }} /></span> (770) 936-3991</div>
+          <div className="footer-fax-num"><span className="contact-fax"><FontAwesomeIcon icon={faFax} style={{ color: "#c59621", }} /></span>(770) 936-3994</div>
+          <div className="footer-email"> <span className="contact-footer-email"><FontAwesomeIcon icon={faEnvelope} style={{ color: "#c59621", }} /></span> yongmen@yongmenlaw.com</div>
         </div>
       </div>
     </div>
