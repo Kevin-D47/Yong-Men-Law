@@ -3,6 +3,10 @@ import { NavLink } from "react-router-dom/cjs/react-router-dom.min";
 
 import resourcesBG from "../../images/resources-bg.jpeg";
 import mapPic from "../../images/location-map-pic.png";
+import amerBarPic from "../../images/american-bar-assoc.png";
+import gaBarPic from "../../images/georgia-bar-assoc.png";
+import amerImmgLawPic from "../../images/american-immigration-lawyers-assoc.png";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { faFax } from "@fortawesome/free-solid-svg-icons";
@@ -16,7 +20,7 @@ const ResourcesPage = () => {
     <div className="resources-page-container">
       <div className="resources-title-container">
         <div className="contact-title">Resources</div>
-        <img className="contact-title-bg" src={resourcesBG} />
+        <img className="resources-title-bg" src={resourcesBG} />
       </div>
       <div className="resources-page-wrapper">
         <div className="resources-links-container">
@@ -56,8 +60,13 @@ const ResourcesPage = () => {
             American Immigration Lawyers Association (AILA)
           </a>
         </div>
+        <div className="attorney-border-dec">________________________________________________________________________________________________________________________</div>
+        <div className="attorney-membership-pics-container">
+          <img src={gaBarPic} className="ga-bar-pic" />
+          <img src={amerBarPic} className="amer-bar-pic" />
+          <img src={amerImmgLawPic} className="amer-imm-law-pic" />
+        </div>
       </div>
-
       <div className="footer-container">
         <div className="footer-about-us-container">
           <div className="footer-about-us-title">About Us</div>
@@ -69,10 +78,10 @@ const ResourcesPage = () => {
         </div>
         <div className="footer-business-overview-container">
           <div className="footer-business-overview-title">Business Overview</div>
-          <NavLink to="/attorney">Attorney</NavLink>
-          <NavLink to="/practice">Practice</NavLink>
-          <NavLink to="/resources">Resources</NavLink>
-          <NavLink to="/contact">Contact Us</NavLink>
+          <NavLink className='footer-nav-link' to="/attorney">Attorney</NavLink>
+          <NavLink className='footer-nav-link' to="/practice">Practice</NavLink>
+          <NavLink className='footer-nav-link' to="/resources">Resources</NavLink>
+          <NavLink className='footer-nav-link' to="/contact">Contact Us</NavLink>
         </div>
         <div className="footer-contact-info-container">
           <div className="footer-contact-us-title">Contact Info</div>
