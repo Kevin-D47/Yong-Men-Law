@@ -18,6 +18,10 @@ import { faClock } from "@fortawesome/free-solid-svg-icons";
 import "./attorneyPage.css";
 
 
+const scrollToTop = () => {
+    window.scrollTo(0, 0)
+}
+
 const AttorneyPage = () => {
 
 
@@ -38,6 +42,7 @@ const AttorneyPage = () => {
                     <div className="attorney-quote">"Your Immigration Story, My Legal Expertise."</div>
                     <div className="attorney-quote-name">Yong Men</div>
                 </div>
+                <div className="attorney-border-dec">________________________________________________________________________________________________________________________</div>
                 <div className="attorney-profile-container">
                     <div className="attorney-profile-wrapper-left">
                         <img src={profilePic} className="attorney-profile-pic" />
@@ -75,6 +80,18 @@ const AttorneyPage = () => {
                         </div>
                     </div>
                 </div>
+                <div className="attorney-border-dec">________________________________________________________________________________________________________________________</div>
+                <div className="attorney-call-us-container">
+                    <div className="attorney-call-us-p1">I'm are here to help.</div>
+                    <div className="attorney-call-us-p2">
+                        To learn more about your potential legal options, have questions or to schedule a consultations contact us
+                        today – it’s free and strictly confidential.
+                    </div>
+                    <NavLink to="/contact" onClick={scrollToTop} style={{ textDecoration: 'none', }}>
+                        <div className="attorney-contact-bttn">Contact Us</div>
+                    </NavLink>
+                </div>
+                <div className="attorney-border-dec">________________________________________________________________________________________________________________________</div>
                 <div className="attorney-membership-pics-container">
                     <img src={gaBarPic} className="ga-bar-pic" />
                     <img src={amerBarPic} className="amer-bar-pic" />
@@ -92,10 +109,10 @@ const AttorneyPage = () => {
                 </div>
                 <div className="footer-business-overview-container">
                     <div className="footer-business-overview-title">Business Overview</div>
-                    <NavLink to="/attorney">Attorney</NavLink>
-                    <NavLink to="/practice">Practice</NavLink>
-                    <NavLink to="/resources">Resources</NavLink>
-                    <NavLink to="/contact">Contact Us</NavLink>
+                    <NavLink className='footer-nav-link' to="/attorney">Attorney</NavLink>
+                    <NavLink className='footer-nav-link' to="/practice">Practice</NavLink>
+                    <NavLink className='footer-nav-link' to="/resources">Resources</NavLink>
+                    <NavLink className='footer-nav-link' to="/contact">Contact Us</NavLink>
                 </div>
                 <div className="footer-contact-info-container">
                     <div className="footer-contact-us-title">Contact Info</div>
