@@ -72,12 +72,14 @@
     padding: 5px;
     border: 1.5px solid rgb(197, 150, 33);
     border-radius: 5px;
+    background-color: rgb(197, 150, 33);
+    color: white;
 }
 
 .chinese-trans-bttn:hover {
     cursor: pointer;
     color: white;
-    background-color: rgb(197, 150, 33);
+    background-color: grey;
 }
 
 .chinese-icon {
