@@ -110,7 +110,13 @@ const ResourcesPage = () => {
             yongmen@yongmenlaw.com
           </div>
         </div>
-        <img className="footer-map-pic" src={mapPic} />
+        <a
+          className="google-maps-links"
+          href="https://www.google.com/maps/place/Yong+Men+Law+Office/@33.892122,-84.2987488,17z/data=!3m1!4b1!4m6!3m5!1s0x88f509b40b02743b:0x9a04e4cf0d29dd79!8m2!3d33.892122!4d-84.2961739!16s%2Fg%2F1tfstqkh?entry=ttu"
+          target="_blank"
+        >
+          <img className="footer-map-pic" src={mapPic} />
+        </a>
       </div>
     </div>
   );

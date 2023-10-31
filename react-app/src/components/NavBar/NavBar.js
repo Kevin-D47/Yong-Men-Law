@@ -46,7 +46,7 @@ const NavBar = ({transBttn, setTransBttn}) => {
           </div>
 
           <button className='chinese-trans-bttn' onClick={() => setTransBttn(!transBttn)}>
-            <img className='chinese-icon' src={chineseIcon} />
+            {/* <img className='chinese-icon' src={chineseIcon} /> */}
             <div className='chinese-txt'>中文版</div>
           </button>
 

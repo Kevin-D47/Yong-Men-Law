@@ -72,16 +72,16 @@ const Homepage = () => {
       <div className="hompage-wrapper">
         <div className="homepage-welcome-container">
           <div className="welcome-message-container">
-            <div className="welcome-message-p1">
+            {/* <div className="welcome-message-p1">
               We are a full-service law office with specializations in U.S. immigration and nationality law. We
               represent companies of all sizes, universities, non-profit organizations, as well as individuals
               undergoing the U.S. immigration process.
             </div>
             <div className="welcome-message-p2">
               Our practice emphasize business and professional immigration matters, including various types of work
-              visas (E/H/J/L/O/P), permanent resident through Labor Certification applications, employer -sponsored
+              visas (E/H/J/L/O/R), permanent residence through the Labor Certification applications, employer-sponsored
               First Preference immigrant visa petitions (multinational business executives, college professors and
-              outstanding researchers), Extraordinary-Ability Aliens and Second Preference National Interest Waivers. We
+              outstanding researchers, Extraordinary-Ability Aliens) and Second Preference National Interest Waivers. We
               also have extensive experience in handling various family based immigration petitions and asylum and
               removal cases. Mr. Men represents clients before the U.S. Citizenship and Immigration Service (CIS), the
               U.S. Immigration and Customs Enforcement (ICE), the Immigration Courts, the Board of Immigration Appeals
@@ -92,9 +92,29 @@ const Homepage = () => {
               most appropriate immigration strategies, highly efficient and professional services and low service fees.
               We are well-known for handling complicated cases, cases that have been turned away by other lawyers,
               Requests for Evidence (RFEs) and various appeals. We promise to return phone calls promptly, process
-              paperwork within the shortest period of time and follow through every case until its completion. Unlike
-              many other immigration firms, we provide over-the-phone and in-person consultations free of charge. So
-              don't hesitate to give us a call or send us an e-mail to schedule a consultation!
+              paperwork within the shortest period of time and follow through every case until its completion.
+            </div> */}
+
+            <div className="welcome-message-p1">
+              We at the Law Offices of Yong Men, P.C. represent companies of all sizes, universities,
+              non-profit organizations, as well as individuals undergoing the U.S. immigration process.
+              Our practice is exclusively in the area of U.S. immigration law. Our Office works to
+              provide employers and employees with the latest and the most appropriate immigration
+              strategies. Our practice emphasizes business and professional immigration matters,
+              including various types of work visas (E/H/J/L/O/P/R), permanent residence through
+              Labor Certification applications, employer-sponsored First Preference petitions
+              (multinational business executives, college professors and outstanding researchers,
+              Extraordinary-Ability Aliens) and National Interest Waivers.
+            </div>
+            <div className="welcome-message-p2">
+              Our firm also has vast experience in handling various family-based immigration
+              applications, including:
+              Marriage-based Green Card applications,
+              Other family-based preference petitions,
+              Citizenship and naturalization applications,
+              Green Card Interviews,
+              K-1 Visas,
+              Waivers and appeals.
             </div>
           </div>
         </div>
@@ -300,7 +320,13 @@ const Homepage = () => {
             yongmen@yongmenlaw.com
           </div>
         </div>
-        <img className="footer-map-pic" src={mapPic} />
+        <a
+          className="google-maps-links"
+          href="https://www.google.com/maps/place/Yong+Men+Law+Office/@33.892122,-84.2987488,17z/data=!3m1!4b1!4m6!3m5!1s0x88f509b40b02743b:0x9a04e4cf0d29dd79!8m2!3d33.892122!4d-84.2961739!16s%2Fg%2F1tfstqkh?entry=ttu"
+          target="_blank"
+        >
+          <img className="footer-map-pic" src={mapPic} />
+        </a>
       </div>
     </div>
   );

@@ -120,7 +120,7 @@ const HomepageChinese = () => {
               </div>
               <div className="service-info-section">
                 <FontAwesomeIcon icon={faPeopleRoof} style={{ color: "#ffffff", fontSize: "26px" }} />
-                <div className="services-info-title">家规</div>
+                <div className="services-info-title">家庭法</div>
                 <div className="services-info-inner">
                   <li>Divorce</li>
                   <li>Adoption</li>
@@ -135,10 +135,9 @@ const HomepageChinese = () => {
           </div>
         </div>
         <div className="hompage-call-us-container">
-          <div className="homepage-call-us-p1">We are here to help.</div>
+          <div className="homepage-call-us-p1">您可以询求我们的帮助。</div>
           <div className="homepage-call-us-p2">
-            To learn more about your potential legal options, have questions or to schedule a consultations contact us
-            today – it’s free and strictly confidential.
+            如果您想进一步了解您的法律权益,请主动联系我们,我们将在首次约谈提供免费的法律咨询。
           </div>
           <div className="homepage-call-us-num">(770) 936-3991</div>
           <div className="phone-icon-dec-container">
@@ -147,7 +146,7 @@ const HomepageChinese = () => {
             <div className="phone-border-dec">__________________________________________________</div>
           </div>
           <Link to="/contact" onClick={scrollToTop} style={{ textDecoration: 'none', }}>
-            <div className="contact-bttn">Contact Us</div>
+            <div className="contact-bttn">联系我们</div>
           </Link>
         </div>
         <div className="hompage-contact-email-container">
@@ -157,7 +156,7 @@ const HomepageChinese = () => {
               <div className="hompage-contact-email-message">
                 Feel free to ask us anything about you legal situation, send us your questions or comments below.
               </div>
-              <div className="hompage-contact-email-message" style={{ color: "white" }}>Let us help you!</div>
+              <div className="hompage-contact-email-message" style={{ color: "white" }}>您可以询求我们的帮助</div>
 
             </div>
             <form ref={form} onSubmit={sendEmail}>
@@ -255,22 +254,20 @@ const HomepageChinese = () => {
 
       <div className="footer-container">
         <div className="footer-about-us-container">
-          <div className="footer-about-us-title">About Us</div>
+          <div className="footer-about-us-title">关于我们 </div>
           <div>
-            We are a full-service law office with specializations in U.S. immigration and nationality law. We represent
-            companies of all sizes, universities, non-profit organizations, as well as individuals undergoing the U.S.
-            immigration process.
+            我们是一家提供全方位服务的律师事务所，专注于美国移民和国籍法。我们代表各种规模的公司、大学、非营利组织以及正在进行美国移民程序的个人。
           </div>
         </div>
         <div className="footer-business-overview-container">
-          <div className="footer-business-overview-title">Business Overview</div>
-          <NavLink className='footer-nav-link' to="/attorney">Attorney</NavLink>
-          <NavLink className='footer-nav-link' to="/practice">Practice</NavLink>
-          <NavLink className='footer-nav-link' to="/resources">Resources</NavLink>
-          <NavLink className='footer-nav-link' to="/contact">Contact Us</NavLink>
+          <div className="footer-business-overview-title">商业信息</div>
+          <NavLink className='footer-nav-link' to="/attorney">律师</NavLink>
+          <NavLink className='footer-nav-link' to="/practice">法律实践</NavLink>
+          <NavLink className='footer-nav-link' to="/resources">资源</NavLink>
+          <NavLink className='footer-nav-link' to="/contact">联系我们</NavLink>
         </div>
         <div className="footer-contact-info-container">
-          <div className="footer-contact-us-title">Contact Info</div>
+          <div className="footer-contact-us-title">联系方式</div>
           <div className="footer-address">
             <div>Address:</div>
             <div> 3331 Chamblee Dunwoody Road, Atlanta, GA, 30341</div>
@@ -296,7 +293,13 @@ const HomepageChinese = () => {
             yongmen@yongmenlaw.com
           </div>
         </div>
-        <img className="footer-map-pic" src={mapPic} />
+        <a
+          className="google-maps-links"
+          href="https://www.google.com/maps/place/Yong+Men+Law+Office/@33.892122,-84.2987488,17z/data=!3m1!4b1!4m6!3m5!1s0x88f509b40b02743b:0x9a04e4cf0d29dd79!8m2!3d33.892122!4d-84.2961739!16s%2Fg%2F1tfstqkh?entry=ttu"
+          target="_blank"
+        >
+          <img className="footer-map-pic" src={mapPic} />
+        </a>
       </div>
     </div>
   );

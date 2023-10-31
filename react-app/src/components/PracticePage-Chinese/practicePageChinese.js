@@ -23,16 +23,16 @@ const scrollToTop = () => {
   window.scrollTo(0, 0)
 }
 
-const PracticePage = () => {
+const PracticePageChinese = () => {
   return (
     <div className="practice-page-container">
       <div className="practice-area-title-container">
-        <div className="practice-area-title">Practice Areas</div>
+        <div className="practice-area-title">法律实践</div>
         <img className="practices-title-bg" src={practicesBG} />
       </div>
       <div className="practice-page-wrapper">
         <div className="immigration-law-container">
-          <div className="us-immigration-title">U.S. Immigration Law</div>
+          <div className="us-immigration-title">美国移民法</div>
           <img className="us-immigration-pic" src={usImmigrationPic} />
           <div className="us-immigration-content-wrapper">
             <div className="employ-base-app-container">
@@ -62,7 +62,7 @@ const PracticePage = () => {
         </div>
         <div className="other-practices-container">
           <div className="business-law-container">
-            <div className="us-immigration-title">Business Law</div>
+            <div className="us-immigration-title">商务法</div>
             <img src={businessPic} className="business-law-pic" />
             <div className="business-content-wrapper">
               <div>
@@ -73,7 +73,7 @@ const PracticePage = () => {
             </div>
           </div>
           <div className="family-law-container">
-            <div className="us-immigration-title">Family Law</div>
+            <div className="us-immigration-title">家规</div>
             <img src={familyPic} className="family-law-pic" />
             <div className="business-content-wrapper">
               <div>
@@ -85,13 +85,12 @@ const PracticePage = () => {
         </div>
         <div className="attorney-border-dec">________________________________________________________________________________________________________________________</div>
         <div className="attorney-call-us-container">
-          <div className="attorney-call-us-p1">We are here to help.</div>
+          <div className="attorney-call-us-p1">您可以询求我们的帮助。</div>
           <div className="attorney-call-us-p2">
-            To learn more about your potential legal options, have questions or to schedule a consultations contact us
-            today – it’s free and strictly confidential.
+            如果您想进一步了解您的法律权益,请主动联系我们,我们将在首次约谈提供免费的法律咨询。
           </div>
           <NavLink to="/contact" onClick={scrollToTop} style={{ textDecoration: 'none', }}>
-            <div className="attorney-contact-bttn">Contact Us</div>
+            <div className="attorney-contact-bttn">联系我们</div>
           </NavLink>
         </div>
         <div className="attorney-border-dec">________________________________________________________________________________________________________________________</div>
@@ -101,24 +100,23 @@ const PracticePage = () => {
           <img src={amerImmgLawPic} className="amer-imm-law-pic" />
         </div>
       </div>
+
       <div className="footer-container">
         <div className="footer-about-us-container">
-          <div className="footer-about-us-title">About Us</div>
+          <div className="footer-about-us-title">关于我们 </div>
           <div>
-            We are a full-service law office with specializations in U.S. immigration and nationality law. We represent
-            companies of all sizes, universities, non-profit organizations, as well as individuals undergoing the U.S.
-            immigration process.
+            我们是一家提供全方位服务的律师事务所，专注于美国移民和国籍法。我们代表各种规模的公司、大学、非营利组织以及正在进行美国移民程序的个人。
           </div>
         </div>
         <div className="footer-business-overview-container">
-          <div className="footer-business-overview-title">Business Overview</div>
-          <NavLink className='footer-nav-link' to="/attorney">Attorney</NavLink>
-          <NavLink className='footer-nav-link' to="/practice">Practice</NavLink>
-          <NavLink className='footer-nav-link' to="/resources">Resources</NavLink>
-          <NavLink className='footer-nav-link' to="/contact">Contact Us</NavLink>
+          <div className="footer-business-overview-title">商业信息</div>
+          <NavLink className='footer-nav-link' to="/attorney">律师</NavLink>
+          <NavLink className='footer-nav-link' to="/practice">法律实践</NavLink>
+          <NavLink className='footer-nav-link' to="/resources">资源</NavLink>
+          <NavLink className='footer-nav-link' to="/contact">联系我们</NavLink>
         </div>
         <div className="footer-contact-info-container">
-          <div className="footer-contact-us-title">Contact Info</div>
+          <div className="footer-contact-us-title">联系方式</div>
           <div className="footer-address">
             <div>Address:</div>
             <div> 3331 Chamblee Dunwoody Road, Atlanta, GA, 30341</div>
@@ -156,4 +154,4 @@ const PracticePage = () => {
   );
 };
 
-export default PracticePage;
+export default PracticePageChinese;

@@ -34,7 +34,7 @@ const TYPEQUESTIONS = [
   "Other",
 ];
 
-const ContactPage = () => {
+const ContactPageChinese = () => {
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -55,7 +55,7 @@ const ContactPage = () => {
   return (
     <div className="contact-page-container">
       <div className="contact-title-container">
-        <div className="contact-title">Contact Us</div>
+        <div className="contact-title">联系我们</div>
         <img className="contact-title-bg" src={contactBG} />
       </div>
       <div className="contact-page-wrapper">
@@ -63,60 +63,60 @@ const ContactPage = () => {
           <div className="contact-info-container-left">
             <form className="form-info-container" ref={form} onSubmit={sendEmail}>
               <div className="form-contact-instructions">
-                You can contact us via phone call, email, walk-in (appointment preferred) or send us your questions
+                You can contact us via phone call, fax, email, walk-in (appointment preferred) or send us your questions
                 or comments in the form below.
               </div>
               <div className="contact-form-req-mes"> <div style={{ color: "red" }}> * </div> - Required field</div>
               <div className="contact-page-form-wrapper">
                 <div className="contact-form-input-container">
-                  <label className="contact-form-input-title">Client Name:<div style={{ color: "red" }}>*</div></label>
+                  <label className="contact-form-input-title">客户名称:<div style={{ color: "red" }}>*</div></label>
                   <input className="contact-form-input-field"
                     type="text"
                     name="client_name"
-                    placeholder="Full Name"
+                    placeholder="全名"
                     required
                   />
                 </div>
 
                 <div className="contact-form-input-container">
-                  <label className="contact-form-input-title">Company Name:</label>
+                  <label className="contact-form-input-title">公司名称:</label>
                   <input
                     className="contact-form-input-field"
                     type="text"
                     name="company_name"
-                    placeholder="Company Name"
+                    placeholder="公司名称"
                   />
                 </div>
 
                 <div className="contact-form-input-container">
-                  <label className="contact-form-input-title">Email:<div style={{ color: "red" }}>*</div></label>
+                  <label className="contact-form-input-title">电子邮件:<div style={{ color: "red" }}>*</div></label>
                   <input
                     className="contact-form-input-field"
                     type="email"
                     name="client_email"
-                    placeholder="Client Email"
+                    placeholder="电子邮件"
                     required
                   />
                 </div>
 
                 <div className="contact-form-input-container">
-                  <label className="contact-form-input-title">Phone:<div style={{ color: "red" }}>*</div></label>
+                  <label className="contact-form-input-title">电话号码:<div style={{ color: "red" }}>*</div></label>
                   <input
                     className="contact-form-input-field"
                     type="number"
                     name="client_phone"
-                    placeholder="Phone Number"
+                    placeholder="电话号码"
                     required
                   />
                 </div>
 
                 <div className="contact-form-input-container">
-                  <label className="contact-form-input-title">Fax:</label>
+                  <label className="contact-form-input-title">传真号:</label>
                   <input
                     className="contact-form-input-field"
                     type="number"
                     name="client_fax"
-                    placeholder="Fax Number"
+                    placeholder="传真号"
                   />
                 </div>
 
@@ -126,10 +126,10 @@ const ContactPage = () => {
                 </div>
 
                 <div className="contact-form-input-container">
-                  <label className="contact-form-input-title">Question:<div style={{ color: "red" }}>*</div></label>
+                  <label className="contact-form-input-title">问题:<div style={{ color: "red" }}>*</div></label>
                   <select className="contact-form-input-field-select" name="question_type" required>
                     <option selected disabled value="">
-                      What do you have a question about?
+                      您有什么疑问？
                     </option>
                     {TYPEQUESTIONS.map((questionType) => (
                       <option key={questionType} value={questionType}>
@@ -142,13 +142,13 @@ const ContactPage = () => {
                     className="contact-form-input-field-question"
                     type="text"
                     name="message"
-                    placeholder="Write your question here."
+                    placeholder="在这里写下您的问题"
                     required
                   />
                 </div>
                 <div className="contact-form-button-container">
                   <button className="contact-email-submit-bttn" type="submit" value="Send">
-                    Submit
+                    提交
                   </button>
                 </div>
 
@@ -174,15 +174,15 @@ const ContactPage = () => {
             <div className="contact-us-email">
               <span className="contact-email"><FontAwesomeIcon icon={faEnvelope} style={{ color: "#c59621", }} /></span> yongmen@yongmenlaw.com</div>
             <div className="business-hours-container">
-              <span className="contact-time"><FontAwesomeIcon icon={faClock} style={{ color: "#c59621", }} />  Business Hours: </span>
+              <span className="contact-time"><FontAwesomeIcon icon={faClock} style={{ color: "#c59621", }} />  营业时间: </span>
 
               <div className="business-hours-weekdays">
-                <div>Monday - Friday</div>
+                <div>周一 - 星期五</div>
                 <div>9:00 am - 6:00pm</div>
               </div>
               <div className="business-hours-weekends">
-                <div>Saturday - Sunday</div>
-                <div>By Appointment</div>
+                <div>周六 - 星期日</div>
+                <div>预约</div>
               </div>
             </div>
           </div>
@@ -195,7 +195,7 @@ const ContactPage = () => {
           href="https://www.google.com/maps/place/Yong+Men+Law+Office/@33.892122,-84.2987488,17z/data=!3m1!4b1!4m6!3m5!1s0x88f509b40b02743b:0x9a04e4cf0d29dd79!8m2!3d33.892122!4d-84.2961739!16s%2Fg%2F1tfstqkh?entry=ttu"
           target="_blank"
         >
-          Click here for direction on Google Maps
+          单击此处查看 Google 地图上的路线
         </a>
 
         <img className="contact-map-pic" src={contactMapPic} />
@@ -209,22 +209,20 @@ const ContactPage = () => {
 
       <div className="footer-container">
         <div className="footer-about-us-container">
-          <div className="footer-about-us-title">About Us</div>
+          <div className="footer-about-us-title">关于我们</div>
           <div>
-            We are a full-service law office with specializations in U.S. immigration and nationality law. We represent
-            companies of all sizes, universities, non-profit organizations, as well as individuals undergoing the U.S.
-            immigration process.
+            我们是一家提供全方位服务的律师事务所，专注于美国移民和国籍法。我们代表各种规模的公司、大学、非营利组织以及正在进行美国移民程序的个人。
           </div>
         </div>
         <div className="footer-business-overview-container">
-          <div className="footer-business-overview-title">Business Overview</div>
-          <NavLink className='footer-nav-link' to="/attorney">Attorney</NavLink>
-          <NavLink className='footer-nav-link' to="/practice">Practice</NavLink>
-          <NavLink className='footer-nav-link' to="/resources">Resources</NavLink>
-          <NavLink className='footer-nav-link' to="/contact">Contact Us</NavLink>
+          <div className="footer-business-overview-title">商业信息</div>
+          <NavLink className='footer-nav-link' to="/attorney">律师</NavLink>
+          <NavLink className='footer-nav-link' to="/practice">法律实践</NavLink>
+          <NavLink className='footer-nav-link' to="/resources">资源</NavLink>
+          <NavLink className='footer-nav-link' to="/contact">联系我们</NavLink>
         </div>
         <div className="footer-contact-info-container">
-          <div className="footer-contact-us-title">Contact Info</div>
+          <div className="footer-contact-us-title">联系方式</div>
           <div className="footer-address">
             <div>Address:</div>
             <div> 3331 Chamblee Dunwoody Road, Atlanta, GA, 30341</div>
@@ -238,4 +236,4 @@ const ContactPage = () => {
   );
 };
 
-export default ContactPage;
+export default ContactPageChinese;

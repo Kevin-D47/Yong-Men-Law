@@ -14,10 +14,17 @@ import NavBarChinese from './components/NavBar-Chinese/NavBarChinese';
 
 import HomePage from "./components/HomPage/homepage";
 import HomepageChinese from './components/HomePage-Chinese/homepageChinese';
+
 import AttorneyPage from './components/AttorneyPage/attorneyPage';
+import AttorneyPageChinese from './components/AttorneyPage-Chinese/attorneyPageChinese';
+
 import PracticePage from './components/PracticePage/practicePage';
+import PracticePageChinese from './components/PracticePage-Chinese/practicePageChinese';
+
 import ResourcesPage from './components/ResourcesPage/resourcesPage';
+
 import ContactPage from './components/ContactPage/contactPage';
+import ContactPageChinese from './components/ContactPage-Chinese/contactPageChinese';
 
 function App() {
 
@@ -54,16 +61,16 @@ function App() {
           <User />
         </ProtectedRoute> */}
          <Route path='/contact' exact={true} >
-          <ContactPage/>
+          {isTransBttn ? <ContactPage/>: <ContactPageChinese/>}
         </Route>
          <Route path='/resources' exact={true} >
           <ResourcesPage/>
         </Route>
         <Route path='/practice' exact={true} >
-          <PracticePage/>
+          {isTransBttn ? <PracticePage/> : <PracticePageChinese/>}
         </Route>
         <Route path='/attorney' exact={true} >
-          <AttorneyPage/>
+          {isTransBttn ? <AttorneyPage/> : <AttorneyPageChinese/>}
         </Route>
         <Route path='/' exact={true} >
           {isTransBttn ? <HomePage/> : <HomepageChinese/>}

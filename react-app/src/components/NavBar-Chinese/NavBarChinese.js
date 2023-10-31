@@ -24,7 +24,7 @@ const NavBarChinese = ({transBttn, setTransBttn}) => {
           <NavLink to='/' className='logo-container'>
             <img className='nav-logo' src={logoPlaceholder} />
             <div className='logo-text-container'>
-              <div>永门律师事务所</div>
+              <div>门勇律师事务所</div>
             </div>
           </NavLink>
 
@@ -44,7 +44,7 @@ const NavBarChinese = ({transBttn, setTransBttn}) => {
           </div>
 
           <button className='chinese-trans-bttn' onClick={() => setTransBttn(!transBttn)}>
-            <img className='chinese-icon' src={chineseIcon} />
+            {/* <img className='chinese-icon' src={chineseIcon} /> */}
             <div className='chinese-txt'>English</div>
           </button>
 
